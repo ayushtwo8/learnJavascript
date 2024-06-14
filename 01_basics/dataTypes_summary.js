@@ -32,8 +32,41 @@ let obj = { // object
     age: 21
 }
 
-const myFunction = function(){ 
+const myFunction = function(){ // function
     console.log("Hello World")
 }
 
-console.log(typeof myFunction)  // function
+
+
+
+// +++++++++++++++++++++++++++ Stack and heap memory +++++++++++++++++++++++++++ //
+
+// Stack (Primitive), Heap (Non-primitive)
+
+// In stack, you get the copy of the variable declared
+// In heap, you get the reference of the original heap
+
+
+// stack example:
+
+let myChannelName = "agastya"
+
+let anotherName = myChannelName
+anotherName = "ayush"
+
+console.log(myChannelName); // agastya
+console.log(anotherName); // ayush
+
+// heap example:
+
+let userOne = {
+    email: "user123@gmail.com",
+    upi: "8747@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "sexyuser@gmail.com"
+
+console.log(userOne.email); // sexyuser@gmail.com
+console.log(userTwo.email); // sexyuser@gmail.com
